@@ -1,0 +1,89 @@
+.App {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.switcher-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.switcher-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.switcher-btn.active-rural {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.switcher-btn.active-phc {
+  background-color: #2c5aa0;
+  color: white;
+  box-shadow: 0 2px 8px rgba(44, 90, 160, 0.3);
+}
+
+.switcher-btn.active-doctor {
+  background-color: #28a745;
+  color: white;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .app-switcher {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .switcher-btn {
+    flex: 1;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+    min-width: auto;
+  }
+}
+
+/* Ensure proper spacing for the main content */
+.App > div:not(.app-switcher) {
+  padding-top: 0;
+}
+
+/* Add some top margin to main content on mobile to avoid overlap with switcher */
+@media (max-width: 768px) {
+  .App > div:not(.app-switcher) {
+    margin-top: 70px;
+  }
+}
