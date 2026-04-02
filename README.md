@@ -1,195 +1,153 @@
-# 🌐 Rural Health Connect (Multi-Portal React System)
+# Rural Health Connect - Multi-Portal React System
 
-A digital healthcare ecosystem designed for rural areas, built as a **multi-portal React application** using React.js, CSS, and modern web technologies. The project consists of three interconnected portals: **Patient Portal**, **PHC Hub**, and **Doctor Portal**. Together, they enable patient registration, AI-powered health monitoring, teleconsultation, PHC management, and doctor consultations with digital prescriptions.
-
----
-
-## 📁 Features
-
-### 🧑‍🤝‍🧑 Patient Portal
-- ➕ Aadhaar-based patient registration with medical history  
-- 📊 Health data entry (BP, sugar, oxygen, vitals)  
-- 🤖 AI-powered risk analysis & alerts  
-- 📹 Teleconsultation with doctors (video + chat)  
-- 📄 Personal health dashboard  
-
-### 🏥 PHC Hub
-- 👥 Manage patients with search, filters, and risk levels  
-- 🚑 Real-time emergency alerts with ambulance dispatch  
-- 📊 Analytics on diseases & village-wise distribution  
-- 📦 Medicine & resource inventory tracking  
-- 📅 Staff schedules and outreach program management  
-
-### 👨‍⚕️ Doctor Portal
-- 📹 Active teleconsultations with video, audio & chat  
-- ❤️ Real-time patient vitals and symptom tracking  
-- 💬 Patient communication panel  
-- 🧾 Digital prescription system with medicine database  
-- 📋 Patient queue & priority consultation handling  
+A digital healthcare ecosystem built for rural areas, structured as a multi-portal React application. The project has three interconnected portals — Patient Portal, PHC Hub, and Doctor Portal — covering patient registration, AI-assisted health monitoring, teleconsultation, PHC management, and doctor consultations with digital prescriptions.
 
 ---
 
-## 🛠️ Technologies Used
-- **Frontend:** React.js, HTML5, CSS3, JavaScript (ES6+)  
-- **Build Tool:** Vite.js for fast development and building
-- **Styling:** CSS Modules / Custom CSS with responsive design  
-- **State Management:** React Hooks (useState, useEffect)
-- **Database:** MongoDB integration for data persistence
-- **Concepts Used:** Component-based architecture, React Router, form handling, state management, mock AI analysis  
+## Features
+
+### Patient Portal
+- Aadhaar-based patient registration with medical history
+- Health data entry for vitals like BP, sugar, and oxygen levels
+- AI-powered risk analysis and alerts
+- Teleconsultation with doctors via video and chat
+- Personal health dashboard
+
+### PHC Hub
+- Patient management with search, filters, and risk-level tagging
+- Real-time emergency alerts with ambulance dispatch
+- Analytics on disease distribution and village-wise breakdowns
+- Medicine and resource inventory tracking
+- Staff schedules and outreach program management
+
+### Doctor Portal
+- Active teleconsultations with video, audio, and chat
+- Real-time patient vitals and symptom tracking
+- Patient communication panel
+- Digital prescription system with a medicine database
+- Patient queue and priority consultation handling
 
 ---
 
-## 📂 Folder Structure
+## Technologies Used
+
+- React.js, HTML5, CSS3, JavaScript (ES6+)
+- Vite.js for development and building
+- CSS Modules and custom CSS for responsive design
+- React Hooks (useState, useEffect) for state management
+- MongoDB for data persistence
+- React Router for client-side routing
+
+---
+
+## Folder Structure
 
 ```
 RURAL_HEALTH_CONNECT/
-├── node_modules/              # Dependencies
-├── public/                    # Static assets
-├── src/                       # Source code
-│   ├── assets/               # Images, icons, static files
-│   ├── App.css               # Main app styling
-│   ├── App.jsx               # Main app component
-│   ├── doctor_portal.css     # Doctor portal styles
-│   ├── doctor_portal.jsx     # Doctor portal component
-│   ├── index.css             # Global styles
-│   ├── main.jsx              # App entry point
-│   ├── nodejs_to_mongodb.js  # Database connection
-│   ├── phc_hub.css           # PHC Hub styles
-│   ├── phc_hub.jsx           # PHC Hub component
-│   ├── rural_health_connect.css # Patient portal styles
-│   ├── rural_health_connect.jsx # Patient portal component
-│   └── test.css              # Test styles
-├── .gitignore                # Git ignore rules
-├── eslint.config.js          # ESLint configuration
-├── index.html                # HTML template
-├── package-lock.json         # Dependency lock file
-├── package.json              # Project dependencies & scripts
-├── README.md                 # Project documentation
-└── vite.config.js            # Vite configuration
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── App.css
+│   ├── App.jsx
+│   ├── doctor_portal.css
+│   ├── doctor_portal.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   ├── nodejs_to_mongodb.js
+│   ├── phc_hub.css
+│   ├── phc_hub.jsx
+│   ├── rural_health_connect.css
+│   ├── rural_health_connect.jsx
+│   └── test.css
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn package manager
-- MongoDB (for database functionality)
+**Prerequisites:** Node.js v14 or higher, npm or yarn, and MongoDB running locally or via a cloud instance.
 
-### Installation
+```bash
+git clone <repository-url>
+cd RURAL_HEALTH_CONNECT
+npm install
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd RURAL_HEALTH_CONNECT
-   ```
+Update the MongoDB connection string in `src/nodejs_to_mongodb.js` if needed, then start the dev server:
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+```bash
+npm run dev
+```
 
-3. **Set up MongoDB**
-   - Ensure MongoDB is running on your system
-   - Update connection settings in `src/nodejs_to_mongodb.js` if needed
-
-4. **Start the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. **Open your browser**
-   - Navigate to `http://localhost:5173` (or the port shown in terminal)
+Navigate to `http://localhost:5173` (or whichever port Vite picks).
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
-In the project directory, you can run:
-
-- **`npm run dev`** - Runs the app in development mode
-- **`npm run build`** - Builds the app for production
-- **`npm run preview`** - Preview the production build locally
-- **`npm run lint`** - Run ESLint for code quality checks
+- `npm run dev` — development server
+- `npm run build` — production build
+- `npm run preview` — preview the production build locally
+- `npm run lint` — run ESLint checks
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
-The application follows a **component-based architecture** with three main portal components:
+Each portal is a self-contained component with its own state and styles. They share the same MongoDB connection layer and are stitched together through `App.jsx`.
 
-- **`App.jsx`** - Main application component with routing logic
-- **`rural_health_connect.jsx`** - Patient Portal component
-- **`phc_hub.jsx`** - PHC Hub management component  
-- **`doctor_portal.jsx`** - Doctor consultation component
-- **`nodejs_to_mongodb.js`** - Database integration layer
-
-Each portal maintains its own state and styling, while sharing common utilities and database connections.
+- `App.jsx` — root component with routing logic
+- `rural_health_connect.jsx` — Patient Portal
+- `phc_hub.jsx` — PHC Hub
+- `doctor_portal.jsx` — Doctor Portal
+- `nodejs_to_mongodb.js` — database integration
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
-### Vite Configuration
-The project uses Vite for fast development and building. Configuration can be found in `vite.config.js`.
+**Vite** — `vite.config.js`
 
-### ESLint Configuration  
-Code quality is maintained using ESLint. Settings are in `eslint.config.js`.
+**ESLint** — `eslint.config.js`
 
-### Database Configuration
-MongoDB connection settings can be modified in `src/nodejs_to_mongodb.js`.
+**MongoDB** — connection settings in `src/nodejs_to_mongodb.js`
 
 ---
 
-## 🌟 Key React Features Used
-
-- **Function Components** with Hooks
-- **useState** for local state management
-- **useEffect** for lifecycle management  
-- **Component composition** for reusable UI elements
-- **Conditional rendering** for dynamic content
-- **Event handling** for user interactions
-- **Form management** with controlled components
-
----
-
-## 🚀 Deployment
-
-To build for production:
+## Deployment
 
 ```bash
 npm run build
 ```
 
-The build files will be generated in the `dist/` directory, ready for deployment to any static hosting service.
+Output goes to the `dist/` directory, ready for any static hosting service. Note that the MongoDB backend will need to be hosted separately and the connection string updated accordingly before deploying.
 
 ---
 
-## 🤝 Contributing
+## Note
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/new-feature`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/new-feature`)
-5. Create a Pull Request
+The `nodejs_to_mongodb.js` file sitting inside `src/` is a bit of an odd placement — that file is a backend concern and doesn't really belong in the frontend source tree. If the project ever gets split into separate client and server folders, this will need to move. For now just be aware that it lives there and anyone new to the codebase might find it confusing.
+
+The AI risk analysis is currently mocked. If there are plans to hook it up to a real model or a proper scoring algorithm before launch, that work hasn't started yet — mark it clearly in the code so it doesn't accidentally ship as if it were real analysis.
 
 ---
 
-## 📄 License
+## Note to Self
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+The `test.css` file in `src/` looks like it was left over from early development. Check if anything actually imports it before deleting, but it's almost certainly dead weight.
 
----
-
-## 📞 Support
-
-For support or questions, please contact the development team or create an issue in the repository.
+Also, the three portals are currently all bundled into one Vite app. If the user base grows or the portals need separate access control, this will get messy fast. Worth thinking about whether to split them into separate deployments or at least separate routes with proper auth guards — right now anyone who knows the URL can access any portal.
 
 ---
 
-**Built with ❤️ for Rural Healthcare**
+## License
+
+MIT License — see the LICENSE file for details.
